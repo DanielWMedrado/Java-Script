@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 1.5em Arial;
+        }
+        input{
+            font: normal 1.15em Arial;
+            width: 150px;
+            background-color: green;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+        div#resM {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id='res'>Resultado</div>
+    <script>
+        function somar() {
+            var tn1 = window.document.querySelector('input#txtn1') 
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value) //Vai converter o valor dentro de tn1
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+
+    <h1>Multiplicando Números</h1>
+
+    <input type="number" name="n1" id="tn1m"> X
+    <input type="number" name="n2" id="tn2m">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="resM">Resultado</div>
+    <script>
+        function multiplicar() {
+            tn1m = window.document.querySelector('input#tn1m')
+            tn2m = window.document.getElementById('tn2m')
+            resm = window.document.getElementById('resM')
+            nm1 = Number(tn1m.value)
+            nm2 = Number(tn2m.value)
+            sm = nm1 * nm2
+            resm.innerHTML = `A multiplicação entre ${nm1} e ${nm2} é igual a <strong>${sm}</strong>`
+        }
+        
+    </script>
+</body>
+</html>

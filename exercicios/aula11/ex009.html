@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <style>
+        h2#cPais{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+
+    <h2>Nacionaliadade</h2>
+
+    <h2 id="cPais">País</h2> 
+
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var txtp = window.document.getElementById('txtp')
+            var res = window.document.getElementById('res')
+            var pais = String(txtp.String)
+
+            if (pais != Brasil){
+                res.innerHTML = `<p>Estrangeiro, Seja Bem Vindo!!</p>`
+            } else{
+                res.innerHTML = `<p>Brasileiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
